@@ -4,23 +4,7 @@ import { useEffect } from 'react';
 
 export default function Dashboard() {
 
-    useEffect(() => {
-        Echo.join('online')
-            .here((users) => {
-                console.log('here', users);
-            })
-            .joining((user) => {
-                console.log('joining', user);
-            })
-            .leaving((user) => {
-                console.log('leaving', user);
-            });
-
-        return () => {
-            Echo.leave('online');
-        }
-
-    }, []);
+    
     return (
         <AuthenticatedLayout
             header={
